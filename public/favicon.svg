@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="16" fill="#161D22"/>
+  <!-- Crossbones -->
+  <path d="M16 46L48 24M16 24L48 46" stroke="#CBD5E1" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="14.5" cy="47.5" r="3" fill="#CBD5E1"/>
+  <circle cx="49.5" cy="22.5" r="3" fill="#CBD5E1"/>
+  <circle cx="14.5" cy="22.5" r="3" fill="#CBD5E1"/>
+  <circle cx="49.5" cy="47.5" r="3" fill="#CBD5E1"/>
+  <!-- Skull -->
+  <path d="M32 16C22.6 16 16 22.2 16 30.5C16 35.4 18.7 39.2 22.5 41.4V46C22.5 47.7 23.8 49 25.5 49H38.5C40.2 49 41.5 47.7 41.5 46V41.4C45.3 39.2 48 35.4 48 30.5C48 22.2 41.4 16 32 16Z" fill="#F8FAFC"/>
+  <!-- Pirate Bandana -->
+  <path d="M16.5 26.5C18 19.8 24.2 15.5 32 15.5C39.8 15.5 46 19.8 47.5 26.5C43 24.5 37.8 23.5 32 23.5C26.2 23.5 21 24.5 16.5 26.5Z" fill="#DC2626"/>
+  <!-- Eye patch strap & patch -->
+  <path d="M18 26L46 34" stroke="#0F172A" stroke-width="2.5"/>
+  <circle cx="25.5" cy="31.5" r="4" fill="#0F172A"/>
+  <circle cx="38.5" cy="31.5" r="3.6" fill="#0F172A"/>
+  <!-- Nose & Teeth -->
+  <path d="M32 36L30 39.5H34L32 36Z" fill="#0F172A"/>
+  <path d="M27.5 44.5V48M32 44.5V48M36.5 44.5V48" stroke="#0F172A" stroke-width="2" stroke-linecap="round"/>
+</svg>

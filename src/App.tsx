@@ -6,6 +6,7 @@ import { MarinerHome } from './home/MarinerHome';
 import { DistroDesktop } from './shell/DistroDesktop';
 import { BootSplash } from './core/BootSplash';
 import { ToastContainer } from './core/ToastContainer';
+import { useDocumentHead } from './core/useDocumentHead';
 
 export const App: React.FC = () => {
   const { activeDistroId, bootingDistroId, launchDistro, returnHome } = useOSStore();
@@ -28,6 +29,8 @@ export const App: React.FC = () => {
 
   const activeDistro = activeDistroId ? DISTRO_MAP[activeDistroId] : null;
   const bootingDistro = bootingDistroId ? DISTRO_MAP[bootingDistroId] : null;
+
+  useDocumentHead(activeDistro, bootingDistro);
 
   return (
     <>
