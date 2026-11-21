@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #1b2226;
+    color: #ffffff;
+  }
+}
+
+.font-mono-term {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* Custom sleek scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.22);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.38);
+}
+
+@keyframes bootFadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes bootBar {
+  0% {
+    width: 0%;
+  }
+  65% {
+    width: 78%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes windowPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.95) translateY(6px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-boot-in {
+  animation: bootFadeIn 0.35s ease-out forwards;
+}
+
+.animate-boot-bar {
+  animation: bootBar 0.85s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-window-pop {
+  animation: windowPop 0.18s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
