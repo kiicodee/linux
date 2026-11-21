@@ -195,8 +195,8 @@ export const MarinerHome: React.FC = () => {
                     onBlur={() => setHoveredDistro(null)}
                     className="flex flex-col items-center p-2 rounded-2xl hover:bg-white/10 focus:bg-white/12 focus:outline-none focus:ring-2 focus:ring-white/40 transition-all duration-150"
                   >
-                    <div className="w-14 h-14 sm:w-[60px] sm:h-[60px] flex items-center justify-center transition-transform duration-200 group-hover:scale-110 group-active:scale-95 drop-shadow-[0_6px_14px_rgba(0,0,0,0.45)]">
-                      <DistroLogo id={distro.id} className="w-14 h-14 sm:w-[58px] sm:h-[58px]" />
+                    <div className="w-16 h-16 sm:w-[76px] sm:h-[76px] flex items-center justify-center transition-transform duration-200 ease-out group-hover:scale-115 group-hover:-translate-y-1 group-active:scale-95 drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)]">
+                      <DistroLogo id={distro.id} className="w-16 h-16 sm:w-[76px] sm:h-[76px]" />
                     </div>
                     <span className="mt-2.5 text-xs sm:text-[13px] font-medium text-white tracking-wide drop-shadow text-center">
                       {distro.name}
@@ -228,8 +228,8 @@ export const MarinerHome: React.FC = () => {
                     onClick={() => setInfoModal('all')}
                     className="flex flex-col items-center p-2 rounded-2xl hover:bg-white/10 focus:bg-white/12 focus:outline-none focus:ring-2 focus:ring-white/40 transition-all duration-150"
                   >
-                    <div className="w-14 h-14 sm:w-[60px] sm:h-[60px] flex items-center justify-center transition-transform duration-200 group-hover:scale-110 group-active:scale-95 drop-shadow-[0_6px_14px_rgba(0,0,0,0.45)]">
-                      <InfoGuideIcon className="w-14 h-14 sm:w-[58px] sm:h-[58px]" />
+                    <div className="w-16 h-16 sm:w-[76px] sm:h-[76px] flex items-center justify-center transition-transform duration-200 ease-out group-hover:scale-115 group-hover:-translate-y-1 group-active:scale-95 drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)]">
+                      <InfoGuideIcon className="w-16 h-16 sm:w-[76px] sm:h-[76px]" />
                     </div>
                     <span className="mt-2.5 text-xs sm:text-[13px] font-medium text-white tracking-wide drop-shadow text-center">
                       Info Distro
@@ -244,9 +244,9 @@ export const MarinerHome: React.FC = () => {
           )}
         </div>
 
-        {/* Live Tooltip Preview Strip (shows on hover/focus without cluttering icons) */}
-        <div className="h-12 mt-4 sm:mt-6 flex items-center justify-center">
-          {hoveredDistro ? (
+        {/* Live Tooltip Preview Strip (only visible on hover/focus for clean macOS-like desktop) */}
+        <div className="h-11 mt-4 sm:mt-6 flex items-center justify-center">
+          {hoveredDistro && (
             <div className="px-4 py-2 rounded-full bg-black/55 backdrop-blur-md border border-white/15 text-xs text-slate-200 flex items-center gap-2.5 shadow-xl animate-window-pop max-w-[92vw]">
               <span
                 className="w-2.5 h-2.5 rounded-full shrink-0"
@@ -256,17 +256,6 @@ export const MarinerHome: React.FC = () => {
               <span className="text-white/40">·</span>
               <span className="truncate">{hoveredDistro.shortDesc}</span>
             </div>
-          ) : (
-            <p className="text-xs text-white/45 text-center">
-              Klik ikon distro untuk langsung mencoba tampilannya, atau klik{' '}
-              <button
-                onClick={() => setInfoModal('all')}
-                className="text-sky-300/85 hover:underline font-medium"
-              >
-                Info Distro
-              </button>{' '}
-              untuk membandingkan.
-            </p>
           )}
         </div>
       </main>
@@ -285,10 +274,10 @@ export const MarinerHome: React.FC = () => {
               onClick={() => launchDistro(distro.id)}
               onMouseEnter={() => setHoveredDistro(distro)}
               onMouseLeave={() => setHoveredDistro(null)}
-              className="group relative flex flex-col items-center justify-center transition-transform duration-150 hover:-translate-y-2 hover:scale-110 active:scale-95 focus:outline-none"
+              className="group relative flex flex-col items-center justify-center transition-transform duration-200 ease-out hover:-translate-y-3 hover:scale-125 active:scale-95 focus:outline-none"
               title={`Buka ${distro.name} (${distro.desktop})`}
             >
-              <DistroLogo id={distro.id} className="w-11 h-11 sm:w-12 sm:h-12 drop-shadow-md" />
+              <DistroLogo id={distro.id} className="w-12 h-12 sm:w-14 sm:h-14 drop-shadow-[0_8px_16px_rgba(0,0,0,0.45)]" />
               <span className="w-1.5 h-1.5 rounded-full bg-white/70 opacity-0 group-hover:opacity-100 mt-0.5 transition-opacity" />
             </button>
           ))}
